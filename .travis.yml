@@ -1,9 +1,29 @@
 language: cpp
+os:
+- linux
+addons:
+    apt:
+        sources:
+          - ubuntu-toolchain-r-test
+        packages:
+          - lcov
+          - libboost-test-dev
 before_script:
-- sudo apt-get install libboost-test-dev -y
+
 script:
-- mkdir build
-- cd build
-- cmake ../
-- cmake --build .
-- cmake --build . --target test
+- mkdir coverage_build
+- cd coverage_build
+- cmake -DCMAKE_BUILD_TYPE=Coverage ..
+- make hello_coverage
+- cd ..
+- mkdir release_build
+- cd release_build
+- cmake ..
+- make
+- cd ..
+
+
+after_success:
+  - cd ${TRAVIS_BUILD_DIR}/coverage_build
+  # Uploading report to CodeCov
+  - bash <(curl -s https://codecov.io/bash) || echo "Codecov did not collect coverage reports"

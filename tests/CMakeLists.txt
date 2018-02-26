@@ -1,5 +1,11 @@
 cmake_minimum_required(VERSION 3.2)
 
+include(CodeCoverage)
+setup_target_for_coverage(${PROJECT_NAME}_coverage 
+  ${PROJECT_NAME}_test 
+  coverage
+  ${CMAKE_CURRENT_SOURCE_DIR} )
+
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
 set(PROJETC_TEST ${PROJECT_NAME}_test)

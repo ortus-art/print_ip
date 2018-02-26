@@ -1,11 +1,11 @@
 language: cpp
 compiler:
   - clang
-  - gcc
+#  - gcc
 env:
   global:
     - MAKE_CMD="make -j2"
-    - CODECOV_TOKEN="3672a8c5-3428-4e95-8a72-3ca80399cb3e"
+  
 os:
 - linux
 dist: trusty
@@ -19,10 +19,9 @@ addons:
           - libboost-test-dev
           - cmake-data
           - cmake
-          - g++-7
+ #         - g++-7
           - clang-5.0 
 
-before_script:
 
 script:
   - cd ${TRAVIS_BUILD_DIR}
@@ -37,8 +36,12 @@ script:
   - make hello_coverage
 after_success:
   - cd ${TRAVIS_BUILD_DIR}/coverage_build
+  - lcov --list coverage.info #Show stats in log 
   # Uploading report to CodeCov
   - bash <(curl -s https://codecov.io/bash) || echo "Codecov did not collect coverage reports"
 
 
-
+jobs: 
+  include:
+    -stage: deploy
+    if: branch = master

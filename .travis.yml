@@ -1,29 +1,60 @@
 language: cpp
+compiler:
+  - clang
+  - gcc
+env:
+  global:
+    - MAKE_CMD="make -j2"
 os:
 - linux
+dist: trusty
 addons:
     apt:
         sources:
           - ubuntu-toolchain-r-test
+          - llvm-toolchain-trusty-5.0
         packages:
           - lcov
           - libboost-test-dev
+          - cmake-data
+          - cmake
+          - g++-7
+          - clang-5.0 
+
 before_script:
 
-script:
-- mkdir coverage_build
-- cd coverage_build
-- cmake -DCMAKE_BUILD_TYPE=Coverage ..
-- make hello_coverage
-- cd ..
-- mkdir release_build
-- cd release_build
-- cmake ..
-- make
-- cd ..
+jobs:
+  include:
+    - stage: compile
+      script:
+        - cd ${TRAVIS_BUILD_DIR}
+        - mkdir release_build
+        - cd release_build
+        - cmake ..
+        - make
+    - stage: test
+      compiler: gcc
+      script:
+        - mkdir coverage_build
+        - cd coverage_build
+        - cmake -DCMAKE_BUILD_TYPE=Coverage ..
+        - make hello_coverage
+      after_success:
+        - cd ${TRAVIS_BUILD_DIR}/coverage_build
+        # Uploading report to CodeCov
+        - bash <(curl -s https://codecov.io/bash) || echo "Codecov did not collect coverage reports"
+      - stage: GitHub Release
+        compiler: gcc
+        script: echo "Deploying to GitHub releases ..."
+        deploy:
+          provider: releases
+          api_key: $GITHUB_OAUTH_TOKEN
+          skip_cleanup: true
+          on:
+            tags: true
+    #- stage: deploy
+    #  compiler: gcc
 
 
-after_success:
-  - cd ${TRAVIS_BUILD_DIR}/coverage_build
-  # Uploading report to CodeCov
-  - bash <(curl -s https://codecov.io/bash) || echo "Codecov did not collect coverage reports"
+
+

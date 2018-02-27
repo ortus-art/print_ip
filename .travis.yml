@@ -30,7 +30,7 @@ script:
 - mkdir release_build
 - cd release_build
 - cmake ..
-- make
+- make package
 - cd ${TRAVIS_BUILD_DIR}
 - mkdir coverage_build
 - cd coverage_build

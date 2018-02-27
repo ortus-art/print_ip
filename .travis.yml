@@ -1,28 +1,22 @@
 language: cpp
 compiler:
-#  - clang
-  - gcc
+- gcc
 env:
   global:
   - MAKE_CMD="make -j2"
-  - secure: PrJQ+jaS5TDOmBGIdLDojRzBEWDO3keiSOzrfkeNNct++I2NnfI+xj66WBSgjUF9jyc94K9bFSrpj9sWbZvb24WDREnDVZgpB5ubcCi2UEG0LhYUb9ICT1hQB0mLjBRtDXvwF2feHTIqxpJotAXLwaDygJ3XxIxvzKT5LgUNN5ZgvBvkHLW1kJEKcSJ6lqgNgytvFPPHXktlCuHJD0XShscK7uoEeFVRqesBXF1ZxokPa6OhCg241RGn3AaViVDGG3ec19RM9NgxeWZqa4a44qTazQVaXrX9LCI3A0mZQqVMJTSWA8rSb7cdLndpKGCgu5UjkgrsR9PLqImhtqQ114brEGuY1zeT2uR4rQYPPuWFagiUbXbFAaw0Vrdz4h4oODiTSWxDTgQHHRIt4EPyti4Xgbxl+kA98Ft1frrkQf+mcK1EtnbkUng6rGVnsWODFyD4deKeYAMEUz5WXmvi69B/sEWVoytU5zOJG4DjuRY2jBI1xjyxLmXskUZUtF2rgVTLEU3wp6nK/J4+8Hh18TGKI4s8HvZX+vB1/Rf1gf4J+nrJtKKjQx6xFE50JLNM6iphETFUJaaKtsItu/5PJqbIfQJoFmFpP/o/8Tp6Hg6ggPeBsTBcaS1adYouPfPa6G4b1plbXxFi5yjoz6+7831HOmLVvoeLQnYrGfhZhfA=
-  - secure: V14L8JGIDI0VUyqDeXZe0iQOcWCKrFdZj1uDLA06lHGICAQEVtdIeUA7IwVijINfp8XDN+qeyODTqvfqQiXx9WauSz76ae/dO5jn4uKVw0nA9IFpAjdJf03PwG2FlrOpIrSBVehjmcqIJWPU0daryepRIhZCg47pU5DJRv96Kx+4eP8XLYloneqIDvX+sCu1LJj9FgoTyaQj9v1K2KI4kWJZ+zv9rAZ9Byw9oj3EXYKyzaWUk5rTtf6FueGOzz0Gsf5qvWzm1jlLufxCoCITSk74lrswKQ5xT5T7+t2vEAC6Ssf/6LxdbA+KD2OuVrosU8bn6AN4xqw3mqudRI/MBYIlGx2sCQ65AfUlN6gIfPKAIZTyDiEjckVIsFtMwnANY14FBbwYW8sK4HD4Xk6VfbI/ag6U3Ll8g+q9BdmHLn9igQ06Qaom4CKzpK94YeGxvtgKtacy72oo7k2JchS6T4AkmgWK0uP33uByAySSJmNPIVOnz0OkVsisukpWi+sJ5RD+ieI1dBJYoJxdNibey7jcqB7oGA9ZDIwJ1MzCn0FE7yDAgWv9rYW9zIUDS3QJjBDgp5NXAsooqwXzXaIVobGhf05i+eLLQ26fFXXaOdT3uvzN/IFBo6TjEjQDFRe59Jw2bSybshuqeEfQf4DQr3WFs8/Abwon9IZHTH6G5u4=
-  - secure: e8lgC2uI0Nwi7lLKF/VLbQGI93ebilzZzQK4JbSEKSLvCaX1CAouE8lB8G1TGvgD6ZZ1T/3U4YEBeTvI2Z2Y6HHk2/e5DszsZrKV0q/MpeFdZvuOWi6GFkNv5IF25946eg0X0Z66nz31YBQ02HXDQoopv+8a1BhWXkkxGUYeoeA7yV5rI0nYwStlbu5KOOuMkXYqlOWr/E3Kk1SHEEved2xZna/wMZfLgdG7l3zTFBO1Zytndt+PBOwVLzi02AcODsoOCmXBXGz/GjTziBfTowyoyLLFlpBhITK+h1Lxt6Kl3oahCXTY36W9od7MZAXeHXVHnNAiRBpoDlU4TQUjVQMua/CAcfalw9zjJdvjcZYuypVBJmOlKtpo7K2nJzjSNDXmNn/LsbPGny74NpvGJzNZZyBMTDgnjxUr95wJDK2AfVp48X7UbMpYWZRPkIbzKj4AAQElhCYuwjcvgwgTh7HqKcwwBFjihb3lbOUu6P8ftmkUkMTeZ53PXR0ZN8iK52tPIchp5aDOdvMrUAZVhyspRcYZC2B0ZZzqDMDkmtXgE+QRmNXsfYD2v2iMPAPb8YYPgtwgs3L3svlTqqiS4muxC88SCZ3zSsLG/S/OK9UdWeL/UfbRGuu/0b7J7g7H8cUGXj3kEKh0gXx8iF9ucyj5ceqWVYiJO1nySrvGRO8=
+  - secure: hUrNCVMneQYVmoJP3mCfFfzbcbnD/O1xe38HJw4+M4wsuQjgMbgBT4o8LrOfQ0N5apsogW4imVw+Bj/81xhQ2ouKTf6yd1SvcnN6aivGXCfIGuk/vmsqJ5qdJOMj+RHY1hOn416aandDI2uuVUH49Q2pUCuoH9jsJV6ir/IMkINXs6mhElA0aL7L+WGRv78EFL7tqdPdsLIXA90SlHLV5+WN0l9yaj0ZlKsh57gGh8y+cxG83RDwBSavHvU0H1kDXR6vCsis2hRsaUuzDEK1s+D27GqZ4c42e9TZumXPPxBdXvqWfjL5CzyHK1vV9g+ktXZ5Ddv3hsRayhRMcPfNsmDmF6j5Vwnk5CGGl+DEp6aeUwE9HSo0OCs782fmcdmaMuc8Jd16EfNXZ/EtxBGPIhTq/e4cXcW6xiJ/JjmaAda9VTEeZEz1IuaKZ7f5g3m9cBGzp2SYZ6mdTlZWWw6yjuBjK7UTto+infA3LmqBmN+zqBWjz4W1XnksJJcjvQc/UlcdPDUQJEUyhKE2pvxWGYr5smzX8q/Cn8dKHow3TPKU5kb7fwuwq3+2XwQAenexuj+q7VTZ7HYDfA8v+rm5R+B4BJp6SLakEtSfxvGL3GtpJcCmnavvmOxMrVixdjVcpN23JWc7mGkAnwWYlwcfRpMWS5XJl+mUuTtNE3t9KWs=
 os:
 - linux
 dist: trusty
 addons:
-    apt:
-        sources:
-          - ubuntu-toolchain-r-test
-        packages:
-          - lcov
-          - libboost-test-dev
-          - cmake-data
-          - cmake
- #         - g++-7
-
-
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - lcov
+    - libboost-test-dev
+    - cmake-data
+    - cmake
 script:
 - cd ${TRAVIS_BUILD_DIR}
 - mkdir release_build
@@ -37,12 +31,12 @@ script:
 after_success:
 - cd ${TRAVIS_BUILD_DIR}/coverage_build
 - lcov --list coverage.info
-- bash <(curl -s https://codecov.io/bash) || echo "Codecov did not collect coverage reports"
+- bash <(curl -s https://codecov.io/bash) || echo "Codecov did not collect coverage
+  reports"
 - cd ${TRAVIS_BUILD_DIR}
 deploy:
   provider: script
   skip_cleanup: true
   script:
-    - curl -T  ${TRAVIS_BUILD_DIR}/release_build/hello-1.0.$TRAVIS_BUILD_NUMBER-Linux.deb -uortus-art:$BINTRAY_API_KEY   https://api.bintray.com/content/ortus-art/hello/hello/1.0.$TRAVIS_BUILD_NUMBER/hello-1.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1
-    
-  
+  - curl -T  ${TRAVIS_BUILD_DIR}/release_build/hello-1.0.$TRAVIS_BUILD_NUMBER-Linux.deb
+    -uortus-art:$BINTRAY_API_KEY "https://api.bintray.com/content/ortus-art/hello/hello/1.0.$TRAVIS_BUILD_NUMBER/hello-1.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"

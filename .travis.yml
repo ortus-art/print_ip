@@ -15,14 +15,12 @@ addons:
     apt:
         sources:
           - ubuntu-toolchain-r-test
-#          - llvm-toolchain-trusty-5.0
         packages:
           - lcov
           - libboost-test-dev
           - cmake-data
           - cmake
  #         - g++-7
- #         - clang-5.0 
 
 
 script:

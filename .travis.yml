@@ -3,8 +3,7 @@ compiler:
 - gcc
 env:
   global:
-  - MAKE_CMD="make -j2"
-  - secure: hUrNCVMneQYVmoJP3mCfFfzbcbnD/O1xe38HJw4+M4wsuQjgMbgBT4o8LrOfQ0N5apsogW4imVw+Bj/81xhQ2ouKTf6yd1SvcnN6aivGXCfIGuk/vmsqJ5qdJOMj+RHY1hOn416aandDI2uuVUH49Q2pUCuoH9jsJV6ir/IMkINXs6mhElA0aL7L+WGRv78EFL7tqdPdsLIXA90SlHLV5+WN0l9yaj0ZlKsh57gGh8y+cxG83RDwBSavHvU0H1kDXR6vCsis2hRsaUuzDEK1s+D27GqZ4c42e9TZumXPPxBdXvqWfjL5CzyHK1vV9g+ktXZ5Ddv3hsRayhRMcPfNsmDmF6j5Vwnk5CGGl+DEp6aeUwE9HSo0OCs782fmcdmaMuc8Jd16EfNXZ/EtxBGPIhTq/e4cXcW6xiJ/JjmaAda9VTEeZEz1IuaKZ7f5g3m9cBGzp2SYZ6mdTlZWWw6yjuBjK7UTto+infA3LmqBmN+zqBWjz4W1XnksJJcjvQc/UlcdPDUQJEUyhKE2pvxWGYr5smzX8q/Cn8dKHow3TPKU5kb7fwuwq3+2XwQAenexuj+q7VTZ7HYDfA8v+rm5R+B4BJp6SLakEtSfxvGL3GtpJcCmnavvmOxMrVixdjVcpN23JWc7mGkAnwWYlwcfRpMWS5XJl+mUuTtNE3t9KWs=
+  - MAKE_CMD="make -j2"  
 os:
 - linux
 dist: trusty

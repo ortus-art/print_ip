@@ -6,6 +6,9 @@ setup_target_for_coverage(${PROJECT_NAME}_coverage
   coverage
   ${CMAKE_CURRENT_SOURCE_DIR} )
 
+set(CMAKE_THREAD_PREFER_PTHREAD TRUE)
+set(THREADS_PREFER_PTHREAD_FLAG TRUE)
+
 find_package(GTest REQUIRED)
 find_package(Threads REQUIRED)
 
@@ -28,9 +31,10 @@ target_include_directories(${PROJETC_TEST} PUBLIC
     ${PROJECT_BINARY_DIR}/src
 )
 
+target_link_libraries(${PROJETC_TEST} Threads::Threads)
+
 target_link_libraries(${PROJETC_TEST} 
   ${PROJECT_NAME}_lib 
-  ${CMAKE_THREAD_LIBS_INIT} 
   ${GTEST_BOTH_LIBRARIES}
 )
 

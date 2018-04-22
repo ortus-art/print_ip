@@ -6,7 +6,7 @@ setup_target_for_coverage(${PROJECT_NAME}_coverage
   coverage
   ${CMAKE_CURRENT_SOURCE_DIR} )
 
-find_package(Boost COMPONENTS unit_test_framework REQUIRED)
+find_package(GTest REQUIRED)
 
 set(PROJETC_TEST ${PROJECT_NAME}_test)
 
@@ -19,17 +19,16 @@ set_target_properties(${PROJETC_TEST} PROPERTIES
   COMPILE_OPTIONS -Wpedantic -Wall -Wextra
 )
 
-set_target_properties(${PROJETC_TEST} PROPERTIES
-  COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
-  INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
+target_include_directories(${PROJETC_TEST} PUBLIC
+  ${GTEST_INCLUDE_DIRS}
 )
 target_include_directories(${PROJETC_TEST} PUBLIC
     ${PROJECT_SOURCE_DIR}/src
     ${PROJECT_BINARY_DIR}/src
 )
 
-target_link_libraries(${PROJETC_TEST} ${PROJECT_NAME}_lib ${Boost_LIBRARIES})
+target_link_libraries(${PROJETC_TEST} ${PROJECT_NAME}_lib ${GTEST_BOTH_LIBRARIES})
 
 
 
-add_test(test_version_valid ${PROJETC_TEST})
+add_test(main_case ${PROJETC_TEST})

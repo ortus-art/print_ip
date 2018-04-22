@@ -13,7 +13,7 @@ addons:
     - ubuntu-toolchain-r-test
     packages:
     - lcov
-    - libboost-test-dev
+    - libgtest-dev
     - cmake-data
     - cmake
 script:

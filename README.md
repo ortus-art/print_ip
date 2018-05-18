@@ -1,4 +1,4 @@
-# hello project
+# print_ip project
 
 [![Build Status][travis-badge]][travis-link]
 [![codecov][codecov-badge]][codecov-link]
@@ -13,10 +13,10 @@ The goal of this project is:
 * Create build infrastructure
 * Initial build chain setup
 
-[travis-badge]:    https://travis-ci.org/ortus-art/hello.svg?branch=master
-[travis-link]:     https://travis-ci.org/ortus-art/hello
+[travis-badge]:    https://travis-ci.org/ortus-art/print_ip.svg?branch=master
+[travis-link]:     https://travis-ci.org/ortus-art/print_ip
 [license-badge]:   https://img.shields.io/badge/License-GPL%20v3-blue.svg
-[codecov-badge]:   https://codecov.io/gh/ortus-art/hello/branch/master/graph/badge.svg
-[codecov-link]:    https://codecov.io/gh/ortus-art/hello
-[bintray-badge]:   https://api.bintray.com/packages/ortus-art/course/hello/images/download.svg
-[bintray-link]:    https://bintray.com/ortus-art/course/hello/_latestVersion
+[codecov-badge]:   https://codecov.io/gh/ortus-art/print_ip/branch/master/graph/badge.svg
+[codecov-link]:    https://codecov.io/gh/ortus-art/print_ip
+[bintray-badge]:   https://api.bintray.com/packages/ortus-art/course/print_ip/images/download.svg
+[bintray-link]:    https://bintray.com/ortus-art/course/print_ip/_latestVersion

@@ -53,7 +53,7 @@ deploy:
     skip-cleanup: true
     github-token: $GITHUB_TOKEN  
     keep-history: true
-    local-dir: print_ip_coverage/html
+    local-dir: coverage_build/html
   - provider: script
     skip_cleanup: true
     script:

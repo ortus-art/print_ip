@@ -19,16 +19,23 @@ addons:
     - cmake
     - g++-7
     - graphviz 
-    - doxygen
 before_install:
     - eval "${MATRIX_EVAL}"
 install:
   # gtest workaround - compile library
-   - cd /usr/src/gtest
+   - pushd /usr/src/gtest
    - sudo cmake .
    - sudo make
    - sudo mv libgtest* /usr/lib/
-   - cd "${TRAVIS_BUILD_DIR}"
+   - popd
+# -- workaround end
+# doxygen workaround - install from source
+  - wget https://github.com/doxygen/doxygen/archive/Release_1_8_13.tar.gz
+  - tar xpvf Release_1_8_13.tar.gz
+  - pushd doxygen-Release_1_8_13
+  - cmake -DCMAKE_INSTALL_PREFIX=/usr .
+  - sudo make install
+  - popd
 # -- workaround end
 script:
 - cd ${TRAVIS_BUILD_DIR}

@@ -36,6 +36,7 @@ script:
 - cd release_build
 - cmake ..
 - make package
+- doxygen Doxyfile
 - cd ${TRAVIS_BUILD_DIR}
 - mkdir coverage_build
 - cd coverage_build
@@ -53,7 +54,7 @@ deploy:
     skip-cleanup: true
     github-token: $GITHUB_TOKEN  
     keep-history: true
-    local-dir: coverage_build/html
+    local-dir: release_build/html
   - provider: script
     skip_cleanup: true
     script:

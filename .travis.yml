@@ -18,6 +18,8 @@ addons:
     - cmake-data
     - cmake
     - g++-7
+    - graphviz 
+    - doxygen
 before_install:
     - eval "${MATRIX_EVAL}"
 install:
@@ -39,6 +41,7 @@ script:
 - cd coverage_build
 - cmake -DCMAKE_BUILD_TYPE=Coverage ..
 - make print_ip_coverage
+- 
 after_success:
 - cd ${TRAVIS_BUILD_DIR}/coverage_build
 - lcov --list coverage.info
@@ -46,7 +49,12 @@ after_success:
   reports"
 - cd ${TRAVIS_BUILD_DIR}
 deploy:
-  provider: script
-  skip_cleanup: true
-  script:
-  - curl -X PUT -T ${TRAVIS_BUILD_DIR}/release_build/print_ip-1.0.$TRAVIS_BUILD_NUMBER-Linux.deb -uortus-art:$BINTRAY_API_KEY "https://api.bintray.com/content/ortus-art/course/print_ip/1.0.$TRAVIS_BUILD_NUMBER/pool/main/m/print_ip/print_ip-1.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"
+  - provider: pages
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN  
+    keep-history: true
+    local-dir: print_ip_coverage/html
+  - provider: script
+    skip_cleanup: true
+    script:
+    - curl -X PUT -T ${TRAVIS_BUILD_DIR}/release_build/print_ip-1.0.$TRAVIS_BUILD_NUMBER-Linux.deb -uortus-art:$BINTRAY_API_KEY "https://api.bintray.com/content/ortus-art/course/print_ip/1.0.$TRAVIS_BUILD_NUMBER/pool/main/m/print_ip/print_ip-1.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"

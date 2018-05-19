@@ -9,9 +9,13 @@ endif()
 
 project(print_ip VERSION 1.0.${VERSION_BUILD})
 
+set(PROJECT_DOXYGEN_DESCRIPTION "Demonstrates Doxygen use in a project" )
+
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/modules)
 
 add_subdirectory(src)
+
+set(PROJECT_DOXYGEN_INPUT ${PROJECT_SOURCE_DIR}/src)
 
 # Unit test are enabled only for Debug or Coverage builds
 if( CMAKE_BUILD_TYPE STREQUAL "Debug" OR CMAKE_BUILD_TYPE STREQUAL "Coverage")
@@ -26,6 +30,18 @@ if( CMAKE_BUILD_TYPE STREQUAL "Debug" OR CMAKE_BUILD_TYPE STREQUAL "Coverage")
     add_subdirectory(tests)
 
 endif()
+
+list(APPEND PROJECT_DOXYGEN_INPUT 
+    ${PROJECT_SOURCE_DIR}/tests
+    ${PROJECT_SOURCE_DIR}/docs/MainPage.md 
+    )
+set(PROJECT_DOXYGEN_README ${PROJECT_SOURCE_DIR}/docs/MainPage.md)
+set(PROJECT_DOXYGEN_README MainPage.md)
+
+string(REPLACE ";" " " PROJECT_DOXYGEN_INPUT "${PROJECT_DOXYGEN_INPUT}")
+
+
+configure_file(docs/Doxyfile.in Doxyfile)
 
 set(CPACK_GENERATOR DEB)
 

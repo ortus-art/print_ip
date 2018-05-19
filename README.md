@@ -2,16 +2,12 @@
 
 [![Build Status][travis-badge]][travis-link]
 [![codecov][codecov-badge]][codecov-link]
-[![License: GPL v3][license-badge]](LICENSE.md)
+[![License: GPL v3][license-badge]](LICENSE)
 [![Download][bintray-badge]][bintray-link]
 
-A base project for other projects
+This is a sample project that demonstrates doxygen usage.
 
-The goal of this project is:
-
-* Base project for further projects
-* Create build infrastructure
-* Initial build chain setup
+[Here](docs/MainPage.md) is main page of the documentation.
 
 [travis-badge]:    https://travis-ci.org/ortus-art/print_ip.svg?branch=master
 [travis-link]:     https://travis-ci.org/ortus-art/print_ip

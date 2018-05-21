@@ -30,26 +30,26 @@ install:
    - popd
 # -- workaround end
 # doxygen workaround - install from source
-  - wget https://github.com/doxygen/doxygen/archive/Release_1_8_13.tar.gz
-  - tar xpvf Release_1_8_13.tar.gz
-  - pushd doxygen-Release_1_8_13
-  - cmake -DCMAKE_INSTALL_PREFIX=/usr .
-  - sudo make install
-  - popd
+   - wget https://github.com/doxygen/doxygen/archive/Release_1_8_13.tar.gz
+   - tar xpvf Release_1_8_13.tar.gz
+   - pushd doxygen-Release_1_8_13
+   - cmake -DCMAKE_INSTALL_PREFIX=/usr .
+   - sudo make install
+   - popd
 # -- workaround end
 script:
 - cd ${TRAVIS_BUILD_DIR}
 - mkdir release_build
-- cd release_build
+- pushd release_build
 - cmake ..
 - make package
-- doxygen Doxyfile
-- cd ${TRAVIS_BUILD_DIR}
+- doxygen docs/Doxyfile
+- popd
 - mkdir coverage_build
-- cd coverage_build
+- pushd coverage_build
 - cmake -DCMAKE_BUILD_TYPE=Coverage ..
 - make print_ip_coverage
-- 
+- popd
 after_success:
 - cd ${TRAVIS_BUILD_DIR}/coverage_build
 - lcov --list coverage.info

@@ -33,15 +33,9 @@ endif()
 
 list(APPEND PROJECT_DOXYGEN_INPUT 
     ${PROJECT_SOURCE_DIR}/tests
-    ${PROJECT_SOURCE_DIR}/docs/MainPage.md 
     )
-set(PROJECT_DOXYGEN_README ${PROJECT_SOURCE_DIR}/docs/MainPage.md)
-set(PROJECT_DOXYGEN_README MainPage.md)
 
-string(REPLACE ";" " " PROJECT_DOXYGEN_INPUT "${PROJECT_DOXYGEN_INPUT}")
-
-
-configure_file(docs/Doxyfile.in Doxyfile)
+add_subdirectory(docs)
 
 set(CPACK_GENERATOR DEB)
 

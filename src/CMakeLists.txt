@@ -7,6 +7,8 @@ set(PROJECT_LIB ${PROJECT_NAME}_lib)
 set(print_ip_lib_src
     common.h
     common.cpp
+    print_traits.h
+    print_ip.h
 )
 
 #Create a static library that is shared between main application and tests

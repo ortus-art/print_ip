@@ -2,7 +2,15 @@
 
 #include <tuple>
 
-#include "common.h"
+#include "print_ip.h"
+
+/// \defgroup app Application
+
+
+/// \addtogroup app
+/// \brief The application that demonstrates the basic usage
+/// of the \ref lib
+/// @{
 
 #include "print_ip.h"
 

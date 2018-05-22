@@ -1,5 +1,3 @@
-#include <common.h>
-
 #include <gtest/gtest.h>
 
 #include "print_ip.h"
@@ -13,9 +11,6 @@
 
 using namespace testing;
 
-
-/// Verify that version is not equal 0
-TEST(main_case, test_version_valid) { ASSERT_STRNE(version(), "0"); }
 
 /// Verify that all type traits are calculated correctly
 /// \details It verifies that std::vector and std::list
@@ -131,7 +126,6 @@ TEST(library_verification, verify_list_values)
 /// Verify that std::vector correctly presented
 /// \details It verifies that  the correct overloads are
 /// called and presented in right order.
-
 TEST(library_verification, verify_vector_values)
 {
 
@@ -152,6 +146,32 @@ TEST(library_verification, verify_vector_values)
               "127.0.0.1\n"
               "127.0.0.1\n");
 }
+
+/// Verify that std::tuple correctly presented
+/// \details It verifies that  the correct overloads are
+/// called and presented in right order.
+TEST(library_verification, verify_tuple_values)
+{
+
+    auto tuple_value = std::make_tuple(192,168, 0,3);
+    auto tuple_long = std::make_tuple(192L,168L, 0,4L);
+    auto tuple_unsigned = std::make_tuple(192U,168U, 0,5U);
+    auto tuple_unsigned_long = std::make_tuple(192UL,168UL, 0,6UL);
+
+    std::ostringstream os;
+
+    print_ip::print(os, tuple_value);
+    print_ip::print(os, tuple_long);
+    print_ip::print(os, tuple_unsigned);
+    print_ip::print(os, tuple_unsigned_long);
+
+    ASSERT_EQ(os.str(),
+              "192.168.0.3\n"
+              "192.168.0.4\n"
+              "192.168.0.5\n"
+              "192.168.0.6\n");
+}
+
 
 /// Main stub function that calls all tests
 int main(int argc, char **argv) {

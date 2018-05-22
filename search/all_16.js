@@ -8,7 +8,6 @@ var searchData=
   ['value_5fcompare',['value_compare',['http://en.cppreference.com/w/cpp/container/map/value_compare.html',1,'std::map&lt; K, T &gt;::value_compare'],['http://en.cppreference.com/w/cpp/container/multimap/value_compare.html',1,'std::multimap&lt; K, T &gt;::value_compare']]],
   ['value_5for',['value_or',['http://en.cppreference.com/w/cpp/experimental/optional/value_or.html',1,'std::experimental::optional']]],
   ['vector',['vector',['http://en.cppreference.com/w/cpp/container/vector.html',1,'std::vector&lt; T &gt;'],['http://en.cppreference.com/w/cpp/container/vector/vector.html',1,'std::vector::vector()']]],
-  ['version',['version',['../d9/df9/common_8cpp.html#aae0723227a447e55f27ee7d2cbfc81cc',1,'version():&#160;common.cpp'],['../dc/d54/common_8h.html#aae0723227a447e55f27ee7d2cbfc81cc',1,'version():&#160;common.cpp']]],
   ['vfprintf',['vfprintf',['http://en.cppreference.com/w/cpp/io/c/vfprintf.html',1,'std']]],
   ['vfscanf',['vfscanf',['http://en.cppreference.com/w/cpp/io/c/vfscanf.html',1,'std']]],
   ['vfwprintf',['vfwprintf',['http://en.cppreference.com/w/cpp/io/c/vfwprintf.html',1,'std']]],

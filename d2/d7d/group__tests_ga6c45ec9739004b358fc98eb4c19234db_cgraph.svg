@@ -9,34 +9,34 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 62)">
 <title>TEST</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-62 196,-62 196,4 -4,4"/>
-<!-- Node13 -->
-<g id="node1" class="node"><title>Node13</title>
+<!-- Node10 -->
+<g id="node1" class="node"><title>Node10</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-19.5 0,-38.5 42,-38.5 42,-19.5 0,-19.5"/>
 <text text-anchor="middle" x="21" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">TEST</text>
 </g>
-<!-- Node14 -->
-<g id="node2" class="node"><title>Node14</title>
+<!-- Node11 -->
+<g id="node2" class="node"><title>Node11</title>
 <g id="a_node2"><a xlink:href="../../dd/de9/namespaceprint__ip.html#a0495a0775e2df081525bd97f35f59363" target="_top" xlink:title="print_ip::print">
 <polygon fill="white" stroke="black" points="98.5,-38.5 98.5,-57.5 171.5,-57.5 171.5,-38.5 98.5,-38.5"/>
 <text text-anchor="middle" x="135" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">print_ip::print</text>
 </a>
 </g>
 </g>
-<!-- Node13&#45;&gt;Node14 -->
-<g id="edge1" class="edge"><title>Node13&#45;&gt;Node14</title>
+<!-- Node10&#45;&gt;Node11 -->
+<g id="edge1" class="edge"><title>Node10&#45;&gt;Node11</title>
 <path fill="none" stroke="midnightblue" d="M42.0234,-32.3968C54.8237,-34.5683 71.973,-37.4776 87.9943,-40.1955"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="87.8582,-43.7223 98.3027,-41.9442 89.029,-36.8209 87.8582,-43.7223"/>
 </g>
-<!-- Node15 -->
-<g id="node3" class="node"><title>Node15</title>
+<!-- Node12 -->
+<g id="node3" class="node"><title>Node12</title>
 <g id="a_node3"><a doxygen="/home/travis/build/ortus-art/print_ip/docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" xlink:href="http://en.cppreference.com/w/cpp/io/basic_ostringstream/str.html#" target="_top" xlink:title="std::ostringstream::str">
 <polygon fill="white" stroke="black" points="78.5,-0.5 78.5,-19.5 191.5,-19.5 191.5,-0.5 78.5,-0.5"/>
 <text text-anchor="middle" x="135" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">std::ostringstream::str</text>
 </a>
 </g>
 </g>
-<!-- Node13&#45;&gt;Node15 -->
-<g id="edge2" class="edge"><title>Node13&#45;&gt;Node15</title>
+<!-- Node10&#45;&gt;Node12 -->
+<g id="edge2" class="edge"><title>Node10&#45;&gt;Node12</title>
 <path fill="none" stroke="midnightblue" d="M42.0234,-25.6032C49.5885,-24.3198 58.6728,-22.7787 68.1455,-21.1717"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="68.8365,-24.6046 78.1102,-19.4813 67.6657,-17.7032 68.8365,-24.6046"/>
 </g>
